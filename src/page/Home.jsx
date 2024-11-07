@@ -1,41 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import lamda from "../assets/images/sphere.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import useThrottleScroll from "../hooks/useThrottleScroll";
+import Menu from "../component/home/Menu";
+import Description from "../component/home/Description";
+import Footer from "../component/common/Footer";
 
 function Home() {
   const navigate = useNavigate();
-  const scrollHeight = useThrottleScroll(30, 50, 400);
+  const [scrollHeight, setScrollHeight] = useState(0);
+  const [titleSuffix, setTitleSuffix] = useState("!");
+  const maxScroll = window.innerHeight;
+
+  // Scroll event listener to update scrollHeight state and title suffix
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      setScrollHeight(currentScroll);
+
+      // Change suffix to "!" when the text size is increasing
+      if (currentScroll <= maxScroll) {
+        setTitleSuffix("!");
+      } else {
+        // Change suffix to "?" when the text size is decreasing
+        setTitleSuffix("?");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [maxScroll]);
 
   return (
     <HomeWrapper>
-      <MenuWrapper>
-        <div
-          onClick={() => {
-            window.scrollTo({ top: 0 });
-            navigate("/archive");
-          }}
-        >
-          α Liking Archive
-        </div>
-        <div
-          onClick={() => {
-            window.scrollTo({ top: 0 });
-            navigate("/findliking");
-          }}
-        >
-          β Find Your Liking
-        </div>
-      </MenuWrapper>{" "}
-      {/* <LamdaImage src={lamda} alt="LAMDA Logo" /> */}
-      <TitleWrapper
-        $process={scrollHeight > 400 ? 100 : (scrollHeight / 400) * 100}
-      >
-        <Title>LAMDA!</Title>
+      <Menu />
+      <TitleWrapper $process={scrollHeight}>
+        <Title $process={scrollHeight}>LAMDA{titleSuffix}</Title>
       </TitleWrapper>
+      <ContentWrapper>
+        <Description />
+        <Footer />
+      </ContentWrapper>
     </HomeWrapper>
   );
 }
@@ -46,51 +54,80 @@ const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  min-height: 200vh; /* 페이지 높이를 충분히 크게 설정 */
+  padding: 20px;
+  background-color: #f9f9f9;
 
-  height: 100%;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
+
 const TitleWrapper = styled.div`
   display: flex;
-  justify-content: start;
-  align-items: center;
-  position: relative;
-  height: 20vh;
-  position: absolute;
-  top: calc(100vh - 10rem + 10rem * ${(props) => props?.$process} / 100);
-  left: calc((100vw - 50rem) * ${(props) => props?.$process} / 80);
-  scale: calc(2 + ${(props) => props.$process} * 4 / 100);
-  -webkit-transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  font-weight: ${(props) => (!props.$isBackGroundBlack ? "400" : "200")};
-  font-family: "PP-Editorial";
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: auto;
+  transition: top 0.3s ease-in-out;
 `;
 
 const Title = styled.h1`
   letter-spacing: -8%;
   margin: 0;
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 3.2rem;
-  font-style: italic;
+  font-size: ${({ $process }) => {
+    const maxScroll = window.innerHeight;
+    if ($process <= maxScroll) {
+      // 200px에서 350px까지 커지기
+      return `calc(200px + (${($process / maxScroll) * 150}px))`;
+    } else {
+      // 350px에서 200px까지
+      return `calc(350px - ((${($process - maxScroll) / maxScroll}) * 150px))`;
+    }
+  }};
   line-height: normal;
   text-transform: capitalize;
+  font-family: serif;
+  font-weight: 400;
+  transition: font-size 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+
+  @media (max-width: 1024px) {
+    font-size: ${({ $process }) => {
+      const maxScroll = window.innerHeight;
+      if ($process <= maxScroll) {
+        return `calc(180px + (${($process / maxScroll) * 100}px))`;
+      } else {
+        return `calc(280px - ((($process - maxScroll) / maxScroll) * 100px))`;
+      }
+    }};
+  }
+
+  @media (max-width: 768px) {
+    font-size: ${({ $process }) => {
+      const maxScroll = window.innerHeight;
+      if ($process <= maxScroll) {
+        return `calc(150px + (${($process / maxScroll) * 80}px))`;
+      } else {
+        return `calc(230px - ((${($process - maxScroll) / maxScroll}) * 80px))`;
+      }
+    }};
+  }
+
+  @media (max-width: 480px) {
+    font-size: ${({ $process }) => {
+      const maxScroll = window.innerHeight;
+      if ($process <= maxScroll) {
+        return `calc(120px + (${($process / maxScroll) * 60}px))`;
+      } else {
+        return `calc(180px - ((${($process - maxScroll) / maxScroll}) * 60px))`;
+      }
+    }};
+  }
 `;
 
-const LamdaImage = styled.img`
-  position: absolute;
-  top: 100%;
-  left: 50%; /* Centers the image horizontally */
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 60%;
-  height: auto;
-`;
-const MenuWrapper = styled.div`
-  font-size: 50px;
-  top: 200px;
-  position: relative;
-  left: 70px;
-  width: auto;
-  height: auto;
-  color: #c3c3c3;
-  font-family: serif;
+const ContentWrapper = styled.div`
+  margin-top: calc(250px);
+  width: 100%;
 `;

@@ -43,8 +43,7 @@ export default Description;
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
+  padding: 70px;
   background-color: #f9f9f9;
   height: auto;
   font-family: Pretendard;

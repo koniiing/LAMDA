@@ -5,7 +5,7 @@ function Footer2() {
   return (
     <FooterWrapper>
       <FooterText>@lamda!</FooterText>
-      <Copyright>Copyright © 2024 LAMDA! All rights reserved.</Copyright>
+      <Copyright>© 2024 LAMDA! All rights reserved.</Copyright>
     </FooterWrapper>
   );
 }

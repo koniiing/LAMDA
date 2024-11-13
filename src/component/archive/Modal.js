@@ -7,21 +7,22 @@ const Modal = ({ image, closeModal }) => {
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <ModalImageWrapper>
           <ModalImage src={image.src} alt={image.title} />
-          <ImageLabel>{image.username || "유저닉네임"}</ImageLabel>
+          <ImageLabel>{image.username || "유저닉네임"}의 취향</ImageLabel>
         </ModalImageWrapper>
+        <VerticalLine />
         <ModalTextWrapper>
           {image.QnA && image.QnA.length > 0 ? (
             image.QnA.map((item, index) => (
               <TextCard key={index}>
                 <h3>{item.question}</h3>
                 <p>{item.answer}</p>
+                <HorizontalLine />
               </TextCard>
             ))
           ) : (
             <p>추가 설명을 여기에 넣을 수 있습니다.</p>
           )}
         </ModalTextWrapper>
-        <CloseButton onClick={closeModal}>닫기</CloseButton>
       </ModalContent>
     </ModalOverlay>
   );
@@ -44,87 +45,78 @@ const ModalOverlay = styled.div`
 
 const ModalContent = styled.div`
   background-color: #fff;
-  width: 1151.16px;
-  max-width: 495;
+  max-width: 1150px;
+  max-height: 484.64px;
   display: flex;
-  padding: 20px;
   border: 0.5px solid #000000;
   position: relative;
 `;
 
 const ModalImageWrapper = styled.div`
-  width: 50%;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  margin: 28.8px 28.8px 49.5px 28.8px;
 `;
 
 const ModalImage = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+  width: 680px;
+  height: 406px;
 `;
 
 const ImageLabel = styled.div`
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-family: Pretendard;
+  bottom: 26.56px;
+  left: 14.97px;
 
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #333;
+  background-color: rgba(255, 255, 255);
+  padding: 12px 10px;
+  border-radius: 20px;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 300;
+  color: #000;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1) inset;
+  text-align: center;
+`;
+
+const VerticalLine = styled.div`
+  width: 0.5px;
+  height: auto;
+  background-color: black;
 `;
 
 const ModalTextWrapper = styled.div`
-  width: 50%;
-  padding-left: 20px;
+  width: 100%;
+  max-width: 350px;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-
-  h2 {
-    font-family: Pretendard;
-
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-family: "PP-Editorial", serif;
-    color: #333;
-  }
+  overflow-y: auto;
 `;
 
 const TextCard = styled.div`
-  background-color: #ffffff;
-  padding: 15px;
-
+  background-color: none;
+  padding: 15px 0;
   h3 {
     font-family: Pretendard;
-
-    font-size: 1rem;
-    margin: 0 0 5px;
+    font-size: 15px;
+    margin-left: 28.78px;
     color: #333;
   }
 
   p {
     font-family: Pretendard;
-    font-size: 0.875rem;
+    font-size: 15px;
     color: #555;
-    margin: 0;
+    margin-left: 28.78px;
   }
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #333;
+const HorizontalLine = styled.div`
+  width: 390px;
+  height: 0.5px;
+  background-color: black;
+  margin-top: 28.78px;
 `;

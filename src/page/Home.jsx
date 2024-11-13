@@ -4,47 +4,58 @@ import styled from "styled-components";
 import Menu from "../component/home/Menu";
 import Description from "../component/home/Description";
 import Footer from "../component/common/Footer";
+import { motion } from "framer-motion";
 
 function Home() {
   const navigate = useNavigate();
   const [scrollHeight, setScrollHeight] = useState(0);
   const [titleSuffix, setTitleSuffix] = useState("!");
+  const [isAnimated, setIsAnimated] = useState(true);
   const maxScroll = window.innerHeight;
+  const animationThreshold = maxScroll * 2; // Set the threshold to window height
 
-  // Scroll event listener to update scrollHeight state and title suffix
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
       setScrollHeight(currentScroll);
 
-      // Change suffix to "!" when the text size is increasing
       if (currentScroll <= maxScroll) {
         setTitleSuffix("!");
       } else {
-        // Change suffix to "?" when the text size is decreasing
         setTitleSuffix("?");
+      }
+
+      if (currentScroll >= animationThreshold) {
+        setIsAnimated(false); // Disable animation after threshold
+      } else {
+        setIsAnimated(true); // Enable animation within threshold
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [maxScroll]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [maxScroll, animationThreshold]);
 
   return (
-    <HomeWrapper>
-      <Menu />
-      <TitleWrapper $process={scrollHeight}>
-        <Title $process={scrollHeight}>LAMDA{titleSuffix}</Title>
-      </TitleWrapper>
-      <ContentWrapper>
-        <Description />
-        <Footer />
-      </ContentWrapper>
-    </HomeWrapper>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.5 }}
+    >
+      <HomeWrapper>
+        <Menu />
+        <TitleWrapper isAnimated={isAnimated}>
+          <Title $process={scrollHeight} isAnimated={isAnimated}>
+            LAMDA{titleSuffix}
+          </Title>
+        </TitleWrapper>
+        <ContentWrapper>
+          <Description />
+          <Footer />
+        </ContentWrapper>
+      </HomeWrapper>
+    </motion.div>
   );
 }
 
@@ -54,7 +65,7 @@ const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 200vh; /* 페이지 높이를 충분히 크게 설정 */
+  min-height: 200vh;
   padding: 20px;
   background-color: #f9f9f9;
 
@@ -65,26 +76,29 @@ const HomeWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   display: flex;
+  overflow: hidden;
   justify-content: flex-start;
   align-items: flex-start;
-  position: fixed;
-  top: 20px;
+  position: ${({ isAnimated }) => (isAnimated ? "fixed" : "relative")};
+  top: ${({ isAnimated }) => (isAnimated ? "20px" : "auto")};
   left: 20px;
   width: auto;
   transition: top 0.3s ease-in-out;
+  height: ${({ $scrollHeight, maxScroll }) => {
+    const maxHeight = 200;
+    return `${Math.min(($scrollHeight / maxScroll) * maxHeight, maxHeight)}px`;
+  }};
 `;
 
 const Title = styled.h1`
   letter-spacing: -8%;
   margin: 0;
-  font-size: ${({ $process }) => {
+  font-size: ${({ $process, isAnimated }) => {
     const maxScroll = window.innerHeight;
-    if ($process <= maxScroll) {
-      // 200px에서 350px까지 커지기
+    if (isAnimated && $process <= maxScroll) {
       return `calc(200px + (${($process / maxScroll) * 150}px))`;
     } else {
-      // 350px에서 200px까지
-      return `calc(350px - ((${($process - maxScroll) / maxScroll}) * 150px))`;
+      return "200px"; // Fixed size after animation threshold
     }
   }};
   line-height: normal;
@@ -94,40 +108,39 @@ const Title = styled.h1`
   transition: font-size 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
 
   @media (max-width: 1024px) {
-    font-size: ${({ $process }) => {
+    font-size: ${({ $process, isAnimated }) => {
       const maxScroll = window.innerHeight;
-      if ($process <= maxScroll) {
+      if (isAnimated && $process <= maxScroll) {
         return `calc(180px + (${($process / maxScroll) * 100}px))`;
       } else {
-        return `calc(280px - ((($process - maxScroll) / maxScroll) * 100px))`;
+        return "180px";
       }
     }};
   }
 
   @media (max-width: 768px) {
-    font-size: ${({ $process }) => {
+    font-size: ${({ $process, isAnimated }) => {
       const maxScroll = window.innerHeight;
-      if ($process <= maxScroll) {
+      if (isAnimated && $process <= maxScroll) {
         return `calc(150px + (${($process / maxScroll) * 80}px))`;
       } else {
-        return `calc(230px - ((${($process - maxScroll) / maxScroll}) * 80px))`;
+        return "150px";
       }
     }};
   }
 
   @media (max-width: 480px) {
-    font-size: ${({ $process }) => {
+    font-size: ${({ $process, isAnimated }) => {
       const maxScroll = window.innerHeight;
-      if ($process <= maxScroll) {
+      if (isAnimated && $process <= maxScroll) {
         return `calc(120px + (${($process / maxScroll) * 60}px))`;
       } else {
-        return `calc(180px - ((${($process - maxScroll) / maxScroll}) * 60px))`;
+        return "120px";
       }
     }};
   }
 `;
 
 const ContentWrapper = styled.div`
-  margin-top: calc(250px);
   width: 100%;
 `;

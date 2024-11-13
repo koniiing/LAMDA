@@ -5,7 +5,7 @@ function ArchiveGrid({ openModal }) {
 
   const imageData = [
     {
-      src: "image1.jpg",
+      src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
       title: "강아지 1",
       username: "유저닉네임1",
       QnA: [
@@ -37,6 +37,26 @@ function ArchiveGrid({ openModal }) {
           answer: "비 오는 날 따뜻한 스프를 좋아해요.",
         },
         {
+          question: "어떤 날씨에 어떤 음식을 먹는 것을 좋아하나요?",
+          answer: "비 오는 날 따뜻한 스프를 좋아해요.",
+        },
+        {
+          question: "어떤 날씨에 어떤 음식을 먹는 것을 좋아하나요?",
+          answer: "비 오는 날 따뜻한 스프를 좋아해요.",
+        },
+        {
+          question: "어떤 날씨에 어떤 음식을 먹는 것을 좋아하나요?",
+          answer: "비 오는 날 따뜻한 스프를 좋아해요.",
+        },
+        {
+          question: "어떤 날씨에 어떤 음식을 먹는 것을 좋아하나요?",
+          answer: "비 오는 날 따뜻한 스프를 좋아해요.",
+        },
+        {
+          question: "어떤 날씨에 어떤 음식을 먹는 것을 좋아하나요?",
+          answer: "비 오는 날 따뜻한 스프를 좋아해요.",
+        },
+        {
           question: "나의 애완동물을 소개해주세요.",
           answer: "조용한 성격의 고양이를 키우고 있어요.",
         },
@@ -51,7 +71,7 @@ function ArchiveGrid({ openModal }) {
       ],
     },
     {
-      src: "image3.jpg",
+      src: process.env.PUBLIC_URL + "/archiveImg/2.png",
       title: "토끼 1",
       username: "유저닉네임3",
       QnA: [
@@ -123,16 +143,14 @@ const ImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.5);
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 `;

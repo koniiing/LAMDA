@@ -5,7 +5,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <FooterText>@lamda!</FooterText>
-      <Copyright>Copyright © 2024 LAMDA! All rights reserved.</Copyright>
+      <Copyright>© 2024 LAMDA! All rights reserved.</Copyright>
     </FooterWrapper>
   );
 }
@@ -13,9 +13,8 @@ function Footer() {
 export default Footer;
 const FooterWrapper = styled.footer`
   margin-top: auto;
-  padding: 20px 0;
   text-align: right;
-  width: 100%;
+  width: auto;
 `;
 
 const FooterText = styled.p`

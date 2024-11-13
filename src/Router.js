@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./page/Home";
 import FindLiking from "./page/FindLiking";
 import Archive from "./page/Archive";
 import LoadingScreen from "./component/common/loading";
 import HowWorks from "./page/HowWorks";
+import Result from "./page/Result";
+import Home from "./page/Home";
 
 function AppRouter() {
   return (
@@ -15,6 +16,7 @@ function AppRouter() {
         <Route path="/findliking" element={<FindLiking />} />
         <Route path="/loading" element={<LoadingScreen />} />
         <Route path="/howworks" element={<HowWorks />} />
+        <Route path="/result" element={<Result />} />
       </Routes>
     </Router>
   );

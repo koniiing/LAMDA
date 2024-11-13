@@ -10,7 +10,7 @@
   src: url("../assets/fonts/pp-italic.otf") format("opentype");
 }
 @font-face {
-  font-family: "PP-Editorial";
+  font-family: PP-Editorial;
   font-weight: 500;
   src: url("../assets/fonts/pp-ultria-bold.otf") format("opentype");
 }
@@ -54,4 +54,17 @@
 @font-face {
   font-family: coolvetica;
   src: url("../assets/fonts/coolvetica-rg.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.pretendard {
+  font-family: "Pretendard";
+}
+.collvetica {
+  font-family: "coolvetica";
 }

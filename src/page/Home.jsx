@@ -95,7 +95,7 @@ const TitleWrapper = styled.div`
   top: 20px;
   left: 20px;
   width: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   height: ${({ $scrollHeight, maxScroll }) => {
     const maxHeight = 200;
     return `${Math.min(($scrollHeight / maxScroll) * maxHeight, maxHeight)}px`;

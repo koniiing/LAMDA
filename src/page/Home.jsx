@@ -11,8 +11,9 @@ function Home() {
   const [scrollHeight, setScrollHeight] = useState(0);
   const [titleSuffix, setTitleSuffix] = useState("!");
   const [isAnimated, setIsAnimated] = useState(true);
-  const maxScroll = window.innerHeight;
-  const animationThreshold = maxScroll * 2; // Set the threshold to window height
+  const maxScroll = window.innerHeight; // Start fading after this point
+  const fadeStart = maxScroll; // Start fading after maxScroll
+  const fadeEnd = maxScroll * 2; // End fading at twice maxScroll
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,16 +26,16 @@ function Home() {
         setTitleSuffix("?");
       }
 
-      if (currentScroll >= animationThreshold) {
-        setIsAnimated(false); // Disable animation after threshold
+      if (currentScroll >= fadeEnd) {
+        setIsAnimated(false);
       } else {
-        setIsAnimated(true); // Enable animation within threshold
+        setIsAnimated(true);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [maxScroll, animationThreshold]);
+  }, [maxScroll, fadeEnd]);
 
   return (
     <motion.div
@@ -46,7 +47,19 @@ function Home() {
       <HomeWrapper>
         <Menu />
         <TitleWrapper isAnimated={isAnimated}>
-          <Title $process={scrollHeight} isAnimated={isAnimated}>
+          <Title
+            $process={scrollHeight}
+            isAnimated={isAnimated}
+            opacity={
+              scrollHeight > fadeStart
+                ? 1 -
+                  Math.min(
+                    (scrollHeight - fadeStart) / (fadeEnd - fadeStart),
+                    1
+                  )
+                : 1
+            } // Fade starts after maxScroll
+          >
             LAMDA{titleSuffix}
           </Title>
         </TitleWrapper>
@@ -68,7 +81,7 @@ const HomeWrapper = styled.div`
   min-height: 200vh;
   padding: 20px;
   background-color: #f9f9f9;
-
+  scroll-behavior: smooth;
   @media (max-width: 768px) {
     padding: 10px;
   }
@@ -76,14 +89,13 @@ const HomeWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   display: flex;
-  overflow: hidden;
   justify-content: flex-start;
   align-items: flex-start;
-  position: ${({ isAnimated }) => (isAnimated ? "fixed" : "relative")};
-  top: ${({ isAnimated }) => (isAnimated ? "20px" : "auto")};
+  position: ${({ isAnimated }) => (isAnimated ? "fixed" : "absolute")};
+  top: 20px;
   left: 20px;
   width: auto;
-  transition: top 0.3s ease-in-out;
+  margin-bottom: 40px;
   height: ${({ $scrollHeight, maxScroll }) => {
     const maxHeight = 200;
     return `${Math.min(($scrollHeight / maxScroll) * maxHeight, maxHeight)}px`;
@@ -91,21 +103,23 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  letter-spacing: -8%;
+  letter-spacing: -10px;
   margin: 0;
   font-size: ${({ $process, isAnimated }) => {
     const maxScroll = window.innerHeight;
     if (isAnimated && $process <= maxScroll) {
       return `calc(200px + (${($process / maxScroll) * 150}px))`;
     } else {
-      return "200px"; // Fixed size after animation threshold
+      return `calc(200px - (${($process / maxScroll) * 20}px))`;
     }
   }};
+  transition: opacity 1s cubic-bezier(0.25, 0.25, 0.75, 0.75),
+    font-size 0.5s cubic-bezier(0.25, 0.25, 0.75, 0.5);
+  opacity: ${({ opacity }) => opacity * 10};
   line-height: normal;
   text-transform: capitalize;
   font-family: serif;
   font-weight: 400;
-  transition: font-size 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
 
   @media (max-width: 1024px) {
     font-size: ${({ $process, isAnimated }) => {

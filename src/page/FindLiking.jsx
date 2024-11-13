@@ -9,36 +9,35 @@ const FindLiking = () => {
   const [imageUrl, setImageUrl] = useState("");
 
   const fetchImage = async (keyword) => {
-    const accessToken =
-      "pina_AMAQCAIXABONGAYAGAAB2DBMJZIR5EYBACGSOL6OIW7FJHR6DIEVEU2LPUFFFVYSHUPVWWHUADUEZWCLEBM4WXN5QZJHJCAA";
-    try {
-      const response = await fetch(
-        `https://api.pinterest.com/v5/search/pins?query=${encodeURIComponent(
-          keyword
-        )}`,
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+    const accessToken = "pina_";
+  //   try {
+  //     const response = await fetch(
+  //       `https://api.pinterest.com/v5/search/pins?query=${encodeURIComponent(
+  //         keyword
+  //       )}`,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${accessToken}`,
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     );
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+  //     if (!response.ok) {
+  //       throw new Error(`HTTP error! status: ${response.status}`);
+  //     }
 
-      const data = await response.json();
-      if (data.items && data.items.length > 0) {
-        setImageUrl(data.items[0].media.images.original.url);
-      } else {
-        alert("이미지를 찾을 수 없습니다.");
-      }
-    } catch (error) {
-      console.error("Error fetching image:", error);
-      alert("이미지를 불러오는 중 오류가 발생했습니다.");
-    }
-  };
+  //     const data = await response.json();
+  //     if (data.items && data.items.length > 0) {
+  //       setImageUrl(data.items[0].media.images.original.url);
+  //     } else {
+  //       alert("이미지를 찾을 수 없습니다.");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching image:", error);
+  //     alert("이미지를 불러오는 중 오류가 발생했습니다.");
+  //   }
+  // };
 
   const handleKeywordChange = (index, value) => {
     const newKeywords = [...keywords];

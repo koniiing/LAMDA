@@ -108,9 +108,9 @@ const Title = styled.h1`
   font-size: ${({ $process, isAnimated }) => {
     const maxScroll = window.innerHeight;
     if (isAnimated && $process <= maxScroll) {
-      return `calc(220px + (${($process / maxScroll) * 150}px))`;
+      return `calc(220px + (${($process / maxScroll) * 170}px))`;
     } else {
-      return `calc(220px - (${($process / maxScroll) * 20}px))`;
+      return `calc(240px - (${($process / maxScroll) * 20}px))`;
     }
   }};
   transition: opacity 1s cubic-bezier(0.25, 0.25, 0.75, 0.75),

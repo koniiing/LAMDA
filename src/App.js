@@ -1,8 +1,9 @@
 import AppRouter from "./Router";
-import { AnimatePresence, motion } from "framer-motion";
+import { GlobalStyles } from "./style/GroblaStyles";
 function App() {
   return (
     <>
+      <GlobalStyles />
       <AppRouter />{" "}
     </>
   );

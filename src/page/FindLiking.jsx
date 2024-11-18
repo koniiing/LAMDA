@@ -6,6 +6,7 @@ import ProcessCircle from "../component/common/ProcessCircle";
 const FindLiking = () => {
   const [keywords, setKeywords] = useState(["", "", "", "", ""]);
   const [name, setName] = useState("");
+
   const [images, setImages] = useState([]); // 여러 이미지를 저장
   const [savedName, setSavedName] = useState(""); // 저장된 닉네임
 
@@ -41,6 +42,7 @@ const FindLiking = () => {
 
     setImages(fetchedImages);
   };
+
 
   const handleKeywordChange = (index, value) => {
     const newKeywords = [...keywords];

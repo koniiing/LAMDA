@@ -6,9 +6,41 @@ import ProcessCircle from "../component/common/ProcessCircle";
 const FindLiking = () => {
   const [keywords, setKeywords] = useState(["", "", "", "", ""]);
   const [name, setName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [images, setImages] = useState([]); // 여러 이미지를 저장
+  const [savedName, setSavedName] = useState(""); // 저장된 닉네임
 
-  const fetchImage = async (keyword) => {};
+  const fetchImages = async () => {
+    const fetchedImages = [];
+
+    for (const keyword of keywords) {
+      if (keyword.trim() === "") continue;
+
+      try {
+        const response = await fetch(
+          "https://kr.pinterest.com/resource/NewsHubBadgeResource/get/?source_url=%2Fswanyjke%2Fmovie%2F&data=%7B%22options%22%3A%7B%7D%2C%22context%22%3A%7B%7D%7D&_=1731749789093",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer YOUR_ACCESS_TOKEN`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (data.data && data.data.length > 0) {
+          fetchedImages.push(data.data[0].image_large_url);
+        }
+      } catch (error) {
+        console.error(`Error fetching image for keyword: ${keyword}`, error);
+      }
+    }
+
+    setImages(fetchedImages);
+  };
 
   const handleKeywordChange = (index, value) => {
     const newKeywords = [...keywords];
@@ -17,14 +49,18 @@ const FindLiking = () => {
   };
 
   const handleSearch = () => {
-    const keyword = keywords.find((k) => k);
-    if (keyword) {
-      fetchImage(keyword);
-    } else {
-      alert("키워드를 입력해주세요.");
+    if (!name.trim()) {
+      alert("닉네임을 입력해주세요.");
+      return;
     }
+    if (!keywords.some((keyword) => keyword.trim())) {
+      alert("최소 하나의 키워드를 입력해주세요.");
+      return;
+    }
+    setSavedName(name); // 닉네임 저장
+    localStorage.setItem("nickname", name); // 닉네임 로컬 스토리지에 저장
+    fetchImages(); // 이미지 검색 실행
   };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -70,7 +106,12 @@ const FindLiking = () => {
             <SubmitButton onClick={handleSearch}>→</SubmitButton>
           </NameInputContainer>
         </NameInputSection>
-        {imageUrl && <ImageResult src={imageUrl} alt="Search Result" />}
+        {/* {imageUrl && <ImageResult src={imageUrl} alt="Search Result" />}{" "} */}
+        <ImageGallery>
+          {images.map((image, index) => (
+            <ImageResult key={index} src={image} alt={`Result ${index + 1}`} />
+          ))}
+        </ImageGallery>
         <Footer />
       </AppContainer>
     </motion.div>
@@ -196,9 +237,16 @@ const SubmitButton = styled.button`
   }
 `;
 
-const ImageResult = styled.img`
+const ImageGallery = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 20px;
-  max-width: 300px;
+`;
+
+const ImageResult = styled.img`
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 `;

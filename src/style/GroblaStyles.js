@@ -7,10 +7,17 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     body{ 
-    font-family: coolvetica, sans-serif,Pretendard,;
+    font-family: coolvetica, sans-serif,Pretendard,PP-Editorial;
     font-style: normal;
+    
 
     }
+    .konkhmer-sleokchher-regular {
+  font-family: "Konkhmer Sleokchher", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 //     @font-face {
 //   font-family: "PP-Editorial";
 //   font-weight: 400;

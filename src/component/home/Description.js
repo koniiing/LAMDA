@@ -46,7 +46,8 @@ const PageWrapper = styled.div`
   padding: 70px;
   background-color: #f9f9f9;
   height: auto;
-  font-family: Pretendard;
+  font-family: "Pretendard";
+  font-weight: 300;
   margin-top: 200vh;
 `;
 

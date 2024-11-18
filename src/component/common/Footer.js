@@ -18,7 +18,7 @@ const FooterWrapper = styled.footer`
 `;
 
 const FooterText = styled.p`
-  font-family: coolvetica;
+  font-family: "Konkhmer Sleokchher";
   font-weight: 400;
   font-size: 1.5rem;
 `;

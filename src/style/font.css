@@ -1,70 +1,34 @@
 @font-face {
-  font-family: PP-Editorial;
-  font-weight: 400;
-  src: url("../assets/fonts/pp-regular.otf") format("opentype");
-}
-@font-face {
-  font-family: PP-Editorial;
-  font-weight: 400;
-  font-style: italic;
-  src: url("../assets/fonts/pp-italic.otf") format("opentype");
-}
-@font-face {
-  font-family: PP-Editorial;
-  font-weight: 500;
-  src: url("../assets/fonts/pp-ultria-bold.otf") format("opentype");
-}
-@font-face {
   font-family: "PP-Editorial";
-  font-weight: 500;
-  font-style: italic;
-  src: url("../assets/fonts/pp-ultra-bolditalic.otf") format("opentype");
+  font-weight: 400;
+  src: url("../assets/fonts/PPEditorialNew-Regular.woff") format("woff");
 }
+
 @font-face {
   font-family: "PP-Editorial";
   font-weight: 300;
-  src: url("../assets/fonts/pp-ultra-light.otf") format("opentype");
+  src: url("../assets/fonts/PPEditorialNew-Ultralight.woff") format("woff");
 }
-@font-face {
-  font-family: "PP-Editorial";
-  font-weight: 300;
-  font-style: italic;
-  src: url("../assets/fonts/pp-ultra-lightitalic.otf") format("opentype");
-}
-@font-face {
-  font-family: Pretendard;
-  font-weight: 600;
-  src: url("../assets/fonts/Pretendard-Bold.woff");
-}
-@font-face {
-  font-family: Pretendard;
-  font-weight: 500;
-  src: url("../assets/fonts/Pretendard-Medium.woff");
-}
-@font-face {
-  font-family: Pretendard;
-  font-weight: 400;
-  src: url("../assets/fonts/Pretendard-Regular.woff");
-}
-@font-face {
-  font-family: Pretendard;
-  font-weight: 100;
-  src: url("../assets/fonts/Pretendard-ExtraLight.woff2");
-}
+
 @font-face {
   font-family: coolvetica;
-  src: url("../assets/fonts/coolvetica-rg.otf") format("opentype");
+  src: url("../assets/fonts/CoolveticaRg-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 .pretendard {
   font-family: "Pretendard";
 }
-.collvetica {
+.coolvetica {
   font-family: "coolvetica";
+}
+.konkhmer-sleokchher-regular {
+  font-family: "Konkhmer Sleokchher", serif;
+  font-weight: 400;
+  font-style: normal;
 }

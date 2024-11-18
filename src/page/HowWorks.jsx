@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Footer2 from "../component/common/Footer2";
 import { motion } from "framer-motion";
 import ProcessCircle from "../component/common/ProcessCircle";
-
+import contentImg from "../assets/images/howworks.svg";
 const HowWorks = () => {
   return (
     <motion.div
@@ -16,7 +16,9 @@ const HowWorks = () => {
         {" "}
         <ProcessCircle />
         <Title>(How LAMDA! Works)</Title>
-        <Footer2 />
+        <Content>
+          <img src={contentImg} />
+        </Content>
       </PageWrapper>
     </motion.div>
   );
@@ -27,7 +29,6 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 `;
 
 const Title = styled.h1`
@@ -40,4 +41,7 @@ const Title = styled.h1`
   &:hover {
     color: black;
   }
+`;
+const Content = styled.div`
+  margin: 0px;
 `;

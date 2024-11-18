@@ -19,7 +19,7 @@ const FooterWrapper = styled.div`
 
 const FooterText = styled.p`
   margin: 0px;
-  font-family: coolvetica;
+  font-family: "Konkhmer Sleokchher";
   font-weight: 400;
   font-size: 3.5rem;
   color: white;

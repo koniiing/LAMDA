@@ -52,7 +52,7 @@ const MenuWrapper = styled.div`
 
 const MenuItem = styled.div`
   margin-bottom: 10px;
-  font-family: coolvetica;
+  font-family: "Konkhmer Sleokchher";
 
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,

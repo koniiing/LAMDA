@@ -50,6 +50,8 @@ const ModalContent = styled.div`
   display: flex;
   border: 0.5px solid #000000;
   position: relative;
+  font-family: Pretendard;
+  font-weight: 300;
 `;
 
 const ModalImageWrapper = styled.div`
@@ -73,9 +75,7 @@ const ImageLabel = styled.div`
   background-color: rgba(255, 255, 255);
   padding: 12px 10px;
   border-radius: 20px;
-  font-family: Pretendard;
   font-size: 12px;
-  font-weight: 300;
   color: #000;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1) inset;
   text-align: center;

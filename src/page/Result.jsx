@@ -3,6 +3,9 @@ import ProcessCircle from "../component/common/ProcessCircle";
 import Footer2 from "../component/common/Footer2";
 import styled from "styled-components";
 const Result = () => {
+  const nickname = localStorage.getItem("nickname");
+  console.log("Saved nickname:", nickname);
+
   return (
     <AppContainer>
       <ProcessCircle />

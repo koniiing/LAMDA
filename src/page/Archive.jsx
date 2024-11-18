@@ -48,8 +48,9 @@ const PageWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 5rem;
-  margin-bottom: 10px;
+  font-size: 120px;
+  margin-top: 210px;
+  margin-bottom: 256px;
   font-family: serif;
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,

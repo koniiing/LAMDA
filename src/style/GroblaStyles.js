@@ -19,7 +19,6 @@ export const GlobalStyles = createGlobalStyle`
   font-style: normal;
 }
 
-
 //     @font-face {
 //   font-family: "PP-Editorial";
 //   font-weight: 400;

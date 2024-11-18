@@ -13,11 +13,12 @@ const Modal = ({ image, closeModal }) => {
         <ModalTextWrapper>
           {image.QnA && image.QnA.length > 0 ? (
             image.QnA.map((item, index) => (
-              <TextCard key={index}>
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
-                <HorizontalLine />
-              </TextCard>
+              <>
+                <TextCard key={index}>
+                  <h3>{item.question}</h3>
+                  <p>{item.answer}</p> <HorizontalLine />
+                </TextCard>{" "}
+              </>
             ))
           ) : (
             <p>추가 설명을 여기에 넣을 수 있습니다.</p>
@@ -45,8 +46,8 @@ const ModalOverlay = styled.div`
 
 const ModalContent = styled.div`
   background-color: #fff;
-  max-width: 1150px;
-  max-height: 484.64px;
+  width: 1807px;
+  max-height: 800px;
   display: flex;
   border: 0.5px solid #000000;
   position: relative;
@@ -63,19 +64,20 @@ const ModalImageWrapper = styled.div`
 `;
 
 const ModalImage = styled.img`
-  width: 680px;
-  height: 406px;
+  width: 1124px;
+  height: 670px;
 `;
 
 const ImageLabel = styled.div`
   position: absolute;
-  bottom: 26.56px;
-  left: 14.97px;
-
+  bottom: 57.64px;
+  left: 45.13px;
+  width: 230px;
+  height: 62.07px;
   background-color: rgba(255, 255, 255);
-  padding: 12px 10px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 10px 43px;
+  border-radius: 39px;
+  font-size: 25px;
   color: #000;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1) inset;
   text-align: center;
@@ -89,34 +91,33 @@ const VerticalLine = styled.div`
 
 const ModalTextWrapper = styled.div`
   width: 100%;
-  max-width: 350px;
-  padding: 20px 0px;
+  max-width: 583px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  margin: 0;
 `;
 
 const TextCard = styled.div`
   background-color: none;
-  padding: 15px 0;
   h3 {
     font-family: Pretendard;
-    font-size: 15px;
-    margin-left: 28.78px;
+    font-size: 20px;
+    margin: 50px;
     color: #333;
   }
 
   p {
     font-family: Pretendard;
-    font-size: 15px;
+    font-size: 20px;
     color: #555;
-    margin-left: 28.78px;
+    margin-left: 50px;
+    margin-bottom: 50px;
   }
 `;
 
 const HorizontalLine = styled.div`
-  width: 390px;
+  width: 563px;
   height: 0.5px;
   background-color: black;
-  margin-top: 28.78px;
 `;

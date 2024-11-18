@@ -119,6 +119,7 @@ const PageWrapper = styled.div`
   background-color: #f9f9f9;
   min-height: 100vh;
   width: 100%;
+  marign-bottom: 530px;
 `;
 
 const ImageGrid = styled.div`
@@ -136,8 +137,8 @@ const ImageGrid = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  width: 214px;
-  height: 128px;
+  width: 368px;
+  height: 219px;
   overflow: hidden;
   display: flex;
   justify-content: center;

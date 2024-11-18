@@ -42,8 +42,8 @@ const Menu = () => {
 export default Menu;
 
 const MenuWrapper = styled.div`
-  font-size: 50px;
-  top: 230px;
+  font-size: 70px;
+  top: 950px;
   position: relative;
   left: 70px;
   width: auto;
@@ -59,7 +59,7 @@ const MenuItem = styled.div`
     1px 1px 0 black;
   cursor: pointer;
   transition: color 0.3s;
-  width: 500px;
+  width: 600px;
 
   &:hover {
     color: black;

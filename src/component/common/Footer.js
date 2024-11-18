@@ -12,7 +12,7 @@ function Footer() {
 
 export default Footer;
 const FooterWrapper = styled.footer`
-  margin-top: auto;
+  margin: 600px 20px 20px 20px;
   text-align: right;
   width: auto;
 `;
@@ -20,11 +20,11 @@ const FooterWrapper = styled.footer`
 const FooterText = styled.p`
   font-family: "Konkhmer Sleokchher";
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 90px;
 `;
 
 const Copyright = styled.p`
   font-family: Pretendard;
-  font-size: 0.9rem;
+  font-size: 18px;
   color: #888;
 `;

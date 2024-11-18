@@ -56,14 +56,14 @@ const ContentSection = styled.div`
 `;
 
 const Paragraph = styled.p`
-  font-size: 1.2rem;
+  font-size: 30px;
   line-height: 1.8;
   margin-bottom: 20px;
 `;
 
 const KoreanText = styled.p`
   text-align: right;
-  font-size: 1.1rem;
+  font-size: 30px;
   line-height: 1.8;
   margin-top: 30px;
   white-space: pre-line;

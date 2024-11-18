@@ -43,7 +43,6 @@ const FindLiking = () => {
     setImages(fetchedImages);
   };
 
-
   const handleKeywordChange = (index, value) => {
     const newKeywords = [...keywords];
     newKeywords[index] = value;
@@ -127,13 +126,13 @@ const AppContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 210px;
 `;
 
 const Title = styled.h1`
-  font-size: 5rem;
-  margin-bottom: 33px;
-  font-family: serif;
+  font-size: 140px;
+  margin-bottom: 67px;
+  font-family: "Instrument Serif";
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
@@ -143,7 +142,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.div`
-  font-size: 20px;
+  font-size: 30px;
   color: #333;
   margin-bottom: 78px;
   line-height: 40px;
@@ -151,7 +150,7 @@ const Description = styled.div`
 `;
 
 const KorDescription = styled.div`
-  font-size: 15px;
+  font-size: 18px;
   color: #333;
 `;
 

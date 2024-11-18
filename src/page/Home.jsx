@@ -118,7 +118,7 @@ const Title = styled.h1`
   opacity: ${({ opacity }) => opacity * 10};
   line-height: normal;
   text-transform: capitalize;
-  font-family: serif;
+  font-family: "PP-Editorial";
   font-weight: 400;
 
   @media (max-width: 1024px) {

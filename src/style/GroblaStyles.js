@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     body{ 
+
     font-family: coolvetica, sans-serif,Pretendard,PP-Editorial;
     font-style: normal;
     
@@ -17,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
   font-weight: 400;
   font-style: normal;
 }
+
 
 //     @font-face {
 //   font-family: "PP-Editorial";

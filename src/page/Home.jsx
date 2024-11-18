@@ -108,7 +108,7 @@ const Title = styled.h1`
   font-size: ${({ $process, isAnimated }) => {
     const maxScroll = window.innerHeight;
     if (isAnimated && $process <= maxScroll) {
-      return `calc(220px + (${($process / maxScroll) * 170}px))`;
+      return `calc(370px + (${($process / maxScroll) * 200}px))`;
     } else {
       return `calc(240px - (${($process / maxScroll) * 20}px))`;
     }
@@ -118,41 +118,8 @@ const Title = styled.h1`
   opacity: ${({ opacity }) => opacity * 10};
   line-height: normal;
   text-transform: capitalize;
-  font-family: "AmstelvarAlpha Default";
-  font-weight: 400;
-
-  @media (max-width: 1024px) {
-    font-size: ${({ $process, isAnimated }) => {
-      const maxScroll = window.innerHeight;
-      if (isAnimated && $process <= maxScroll) {
-        return `calc(180px + (${($process / maxScroll) * 100}px))`;
-      } else {
-        return "180px";
-      }
-    }};
-  }
-
-  @media (max-width: 768px) {
-    font-size: ${({ $process, isAnimated }) => {
-      const maxScroll = window.innerHeight;
-      if (isAnimated && $process <= maxScroll) {
-        return `calc(150px + (${($process / maxScroll) * 80}px))`;
-      } else {
-        return "150px";
-      }
-    }};
-  }
-
-  @media (max-width: 480px) {
-    font-size: ${({ $process, isAnimated }) => {
-      const maxScroll = window.innerHeight;
-      if (isAnimated && $process <= maxScroll) {
-        return `calc(120px + (${($process / maxScroll) * 60}px))`;
-      } else {
-        return "120px";
-      }
-    }};
-  }
+  font-family: "Instrument Serif";
+  text-shadow: 10px 10px 10px 10px red inset;
 `;
 
 const ContentWrapper = styled.div`

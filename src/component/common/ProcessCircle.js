@@ -3,9 +3,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const MenuContainer = styled.div`
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;

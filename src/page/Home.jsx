@@ -85,6 +85,10 @@ const HomeWrapper = styled.div`
   min-height: 200vh;
   padding: 20px;
   background-color: #f9f9f9;
+  background-image: url(${process.env.PUBLIC_URL}/homeBackground.svg);
+  background-size: cover;
+  background-position: center; /* 이미지를 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 제거 */
   scroll-behavior: smooth;
   @media (max-width: 768px) {
     padding: 10px;

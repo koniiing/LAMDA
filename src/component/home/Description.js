@@ -45,7 +45,6 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 329px;
-  background-color: #f9f9f9;
   height: auto;
   font-family: "Pretendard";
   font-weight: 300;

@@ -18,7 +18,7 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  bottom: 178px;
+  margin-bottom: 100px;
 `;
 
 const FooterText = styled.p`

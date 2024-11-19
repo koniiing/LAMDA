@@ -55,8 +55,8 @@ const MenuItem = styled.div`
   font-family: "Konkhmer Sleokchher";
 
   color: white;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
+  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
+    0.5px 0.5px 0 black;
   cursor: pointer;
   transition: color 0.3s;
   width: 600px;

@@ -129,7 +129,6 @@ const Title = styled.h1`
   line-height: normal;
   text-transform: capitalize;
   font-family: "Instrument Serif";
-  text-shadow: 10px 10px 10px 10px red inset;
 `;
 
 const ContentWrapper = styled.div`

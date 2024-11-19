@@ -27,13 +27,13 @@ const FooterText = styled.p`
   font-weight: 400;
   font-size: 65px;
   color: white;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  letter-spacing: -3.25px;
+  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
+    0.5px 0.5px 0 black;
+  letter-spacing: -7.2px;
 `;
 
 const Copyright = styled.p`
   font-family: Pretendard;
   font-size: 13px;
-  color: #000;
+  color: #484848;
 `;

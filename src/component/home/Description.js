@@ -31,7 +31,8 @@ const Description = () => {
           <br />
           <strong>LAMDA!</strong>는 이 시간 모두에게 <strong>나 다운 것</strong>
           <br />
-          나의 취향에 대해 생각할 수 있는 시간을 제공하고자 한다.
+          나의 취향에 대해 생각할 수 있는 시간을 제공하고자 한다.{" "}
+          <FindYourLiking>Find Your Liking!</FindYourLiking>
         </KoreanText>
       </ContentSection>
     </PageWrapper>
@@ -43,7 +44,7 @@ export default Description;
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 70px;
+  padding-left: 329px;
   background-color: #f9f9f9;
   height: auto;
   font-family: "Pretendard";
@@ -56,23 +57,36 @@ const ContentSection = styled.div`
 `;
 
 const Paragraph = styled.p`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   line-height: 1.8;
   margin-bottom: 20px;
+  letter-spacing: -1px;
+
   strong {
     font-weight: 700;
   }
 `;
 
 const KoreanText = styled.p`
+  padding-right: 382px;
   text-align: right;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 1.8;
   margin-top: 30px;
   white-space: pre-line;
   font-weight: 400;
+  letter-spacing: -1px;
   strong {
     font-weight: 700;
   }
+`;
+const FindYourLiking = styled.p`
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-size: 70px;
+  color: white;
+  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
+    0.5px 0.5px 0 black;
+  margin-top: 50px;
 `;

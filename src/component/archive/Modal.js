@@ -105,6 +105,8 @@ const ModalTextWrapper = styled.div`
 
 const TextCard = styled.div`
   background-color: none;
+  width: 550px;
+
   h3 {
     font-family: Pretendard;
     font-size: 20px;
@@ -120,6 +122,7 @@ const TextCard = styled.div`
     margin-left: 50px;
     margin-bottom: 50px;
     font-weight: 300;
+    line-height: 25px;
   }
 `;
 

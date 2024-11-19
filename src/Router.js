@@ -6,6 +6,7 @@ import LoadingScreen from "./component/common/loading";
 import HowWorks from "./page/HowWorks";
 import Result from "./page/Result";
 import Home from "./page/Home";
+import WhereItAllBegan from "./page/WhereItAllBegan";
 
 function AppRouter() {
   return (
@@ -17,6 +18,7 @@ function AppRouter() {
         <Route path="/loading" element={<LoadingScreen />} />
         <Route path="/howworks" element={<HowWorks />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/drive" element={<WhereItAllBegan />} />
       </Routes>
     </Router>
   );

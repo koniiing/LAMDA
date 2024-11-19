@@ -113,6 +113,7 @@ const TextCard = styled.div`
     margin: 50px;
     color: #484848;
     font-weight: 600;
+    line-height: 25px;
   }
 
   p {

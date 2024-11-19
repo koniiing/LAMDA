@@ -57,8 +57,12 @@ const ContentSection = styled.div`
 
 const Paragraph = styled.p`
   font-size: 30px;
+  font-weight: 400;
   line-height: 1.8;
   margin-bottom: 20px;
+  strong {
+    font-weight: 700;
+  }
 `;
 
 const KoreanText = styled.p`
@@ -67,4 +71,8 @@ const KoreanText = styled.p`
   line-height: 1.8;
   margin-top: 30px;
   white-space: pre-line;
+  font-weight: 400;
+  strong {
+    font-weight: 700;
+  }
 `;

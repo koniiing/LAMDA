@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { ArchiveData } from "./ArchiveData";
 function ArchiveGrid({ openModal }) {
-  // src/data/imageData.js
-
   return (
     <PageWrapper>
       <ImageGrid>
@@ -27,7 +25,7 @@ const PageWrapper = styled.div`
   background-color: #f9f9f9;
   min-height: 100vh;
   width: 100%;
-  marign-bottom: 530px;
+  margin-bottom: 230px;
 `;
 
 const ImageGrid = styled.div`

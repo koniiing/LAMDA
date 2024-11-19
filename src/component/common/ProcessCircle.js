@@ -25,14 +25,13 @@ const ProcessCircle = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Determine active index based on the current path
   const getActiveIndex = () => {
     switch (location.pathname) {
       case "/howworks":
         return 0;
       case "/archive":
         return 1;
-      case "/findliking":
+      case "/drive":
         return 2;
       case "/result":
         return 3;
@@ -52,7 +51,7 @@ const ProcessCircle = () => {
         navigate("/archive");
         break;
       case 2:
-        navigate("/findliking");
+        navigate("/drive");
         break;
       case 3:
         navigate("/result");

@@ -70,16 +70,21 @@ const ModalImage = styled.img`
 
 const ImageLabel = styled.div`
   position: absolute;
-  bottom: 57.64px;
-  left: 45.13px;
+  bottom: 49.93px;
+  left: 27px;
   width: 230px;
   height: 62.07px;
   background-color: rgba(255, 255, 255);
   padding: 10px 43px;
   border-radius: 39px;
+  font-family: "Pretendard";
+  font-weight: 400;
   font-size: 25px;
-  color: #000;
+  color: #484848;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 `;
 
@@ -104,7 +109,8 @@ const TextCard = styled.div`
     font-family: Pretendard;
     font-size: 20px;
     margin: 50px;
-    color: #333;
+    color: #484848;
+    font-weight: 600;
   }
 
   p {
@@ -113,6 +119,7 @@ const TextCard = styled.div`
     color: #555;
     margin-left: 50px;
     margin-bottom: 50px;
+    font-weight: 300;
   }
 `;
 

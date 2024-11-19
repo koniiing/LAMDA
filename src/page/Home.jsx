@@ -5,7 +5,7 @@ import Menu from "../component/home/Menu";
 import Description from "../component/home/Description";
 import Footer from "../component/common/Footer";
 import { motion } from "framer-motion";
-import lamdaGif from "../assets/images/lamda.gif";
+import lamdaGif from "../assets/images/0001-0150.gif";
 function Home() {
   const navigate = useNavigate();
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -103,7 +103,7 @@ const TitleWrapper = styled.div`
   align-items: flex-start;
   position: ${({ isAnimated }) => (isAnimated ? "fixed" : "absolute")};
   top: 20px;
-  left: 20px;
+  left: 102px;
   width: auto;
   margin-bottom: 20px;
   height: ${({ $scrollHeight, maxScroll }) => {

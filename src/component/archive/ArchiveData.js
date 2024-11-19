@@ -1,6 +1,6 @@
 export const ArchiveData = [
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/1.png",
     title: "강아지 1",
     username: "돌멩이",
     QnA: [
@@ -42,7 +42,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/2.png",
     title: "강아지 1",
     username: "bng",
     QnA: [
@@ -89,7 +89,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/3.png",
     title: "강아지 1",
     username: "kong",
     QnA: [
@@ -135,7 +135,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/4.png",
     title: "강아지 1",
     username: "장미",
     QnA: [
@@ -177,7 +177,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/5.png",
     title: "강아지 1",
     username: "윤",
     QnA: [
@@ -221,7 +221,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/6.png",
     title: "강아지 1",
     username: "헐나유다빈밴드팬인데",
     QnA: [
@@ -269,7 +269,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/7.png",
     title: "강아지 1",
     username: "김시훈",
     QnA: [
@@ -311,7 +311,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/8.png",
     title: "강아지 1",
     username: "thouzend",
     QnA: [
@@ -359,7 +359,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/9.png",
     title: "강아지 1",
     username: "피카피카",
     QnA: [
@@ -393,7 +393,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/10.png",
     title: "강아지 1",
     username: "다시마",
     QnA: [
@@ -436,9 +436,9 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/11.png",
     title: "강아지 1",
-    username: "서강대 존잘남 *우*",
+    username: "서존",
     QnA: [
       {
         question: "어떤 날씨에 어떤 음식을 먹는 것을 좋아하나요?",
@@ -478,7 +478,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/12.png",
     title: "강아지 1",
     username: "도현",
     QnA: [
@@ -521,7 +521,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/13.png",
     title: "강아지 1",
     username: "별",
     QnA: [
@@ -563,7 +563,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/14.png",
     title: "강아지 1",
     username: "오렌지",
     QnA: [
@@ -607,7 +607,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/15.png",
     title: "강아지 1",
     username: "신우석동생",
     QnA: [
@@ -649,7 +649,7 @@ export const ArchiveData = [
     ],
   },
   {
-    src: process.env.PUBLIC_URL + "/archiveImg/arvchiveimg1.jpg",
+    src: process.env.PUBLIC_URL + "/archiveImg/16.png",
     title: "강아지 1",
     username: "진",
     QnA: [

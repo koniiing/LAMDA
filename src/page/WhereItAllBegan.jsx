@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Footer from "../component/common/Footer2";
 import ProcessCircle from "../component/common/ProcessCircle";
 const images = [
-  process.env.PUBLIC_URL + "/inspirations/1.webp",
+  process.env.PUBLIC_URL + "/inspirations/1.png",
   process.env.PUBLIC_URL + "/inspirations/2.png",
   process.env.PUBLIC_URL + "/inspirations/3.png",
   process.env.PUBLIC_URL + "/inspirations/4.png",

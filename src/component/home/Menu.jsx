@@ -28,12 +28,12 @@ const Menu = () => {
       <MenuItem
         onClick={() => {
           window.scrollTo({ top: 0 });
-          navigate("/findliking");
+          navigate("/inspiration");
         }}
       >
         {" "}
         <img src={ellipse} />
-        Find ( &nbsp;&nbsp;&nbsp;) Liking
+        Where It All Began
       </MenuItem>
     </MenuWrapper>
   );
@@ -60,7 +60,7 @@ const MenuItem = styled.div`
 
   cursor: pointer;
   transition: color 0.3s;
-  width: 600px;
+  width: 700px;
 
   &:hover {
     color: #484848;

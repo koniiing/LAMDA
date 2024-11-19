@@ -39,8 +39,6 @@ function Archive() {
 export default Archive;
 
 const PageWrapper = styled.div`
-  background-color: #f9f9f9;
-
   display: flex;
   flex-direction: column;
   align-items: center;

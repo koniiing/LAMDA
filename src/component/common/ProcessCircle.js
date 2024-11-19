@@ -31,10 +31,8 @@ const ProcessCircle = () => {
         return 0;
       case "/archive":
         return 1;
-      case "/drive":
+      case "/inspiration":
         return 2;
-      case "/result":
-        return 3;
       default:
         return 0;
     }
@@ -51,11 +49,9 @@ const ProcessCircle = () => {
         navigate("/archive");
         break;
       case 2:
-        navigate("/drive");
+        navigate("/inspiration");
         break;
-      case 3:
-        navigate("/result");
-        break;
+
       default:
         navigate("/");
     }
@@ -63,7 +59,7 @@ const ProcessCircle = () => {
 
   return (
     <MenuContainer>
-      {[0, 1, 2, 3, 4].map((index) => (
+      {[0, 1, 2, 3].map((index) => (
         <Circle
           key={index}
           isActive={index === activeIndex}

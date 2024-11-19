@@ -16,8 +16,8 @@ const Circle = styled.div`
   width: ${(props) => (props.isActive ? "20px" : "10px")};
   height: ${(props) => (props.isActive ? "20px" : "10px")};
   border-radius: 50%;
-  border: 1px solid black; /* Add black border */
-  background-color: ${(props) => (props.isActive ? "black" : "white")};
+  border: 1px solid #484848;
+  background-color: ${(props) => (props.isActive ? "#484848" : "white")};
   transition: width 0.3s, height 0.3s;
 `;
 

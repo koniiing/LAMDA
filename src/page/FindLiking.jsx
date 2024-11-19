@@ -134,8 +134,9 @@ const Title = styled.h1`
   margin-bottom: 67px;
   font-family: "Instrument Serif";
   color: white;
-  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
-    0.5px 0.5px 0 black;
+  text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
+    -0.5px 0.5px 0 #484848, 0.5px 0.5px 0 #484848;
+
   &:hover {
     color: black;
   }
@@ -234,7 +235,7 @@ const SubmitButton = styled.button`
   align-items: center;
 
   &:hover {
-    color: black;
+    color: #484848;
   }
 `;
 

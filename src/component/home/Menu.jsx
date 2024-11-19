@@ -55,14 +55,15 @@ const MenuItem = styled.div`
   font-family: "Konkhmer Sleokchher";
 
   color: white;
-  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
-    0.5px 0.5px 0 black;
+  text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
+    -0.5px 0.5px 0 #484848, 0.5px 0.5px 0 #484848;
+
   cursor: pointer;
   transition: color 0.3s;
   width: 600px;
 
   &:hover {
-    color: black;
+    color: #484848;
   }
   display: flex;
   aligtn-items: center;

@@ -131,5 +131,5 @@ const HorizontalLine = styled.div`
   height: 0.5px;
   background-color: #484848;
   position: relative;
-  z-index: 1; /* 구분선을 다른 요소보다 위로 표시 */
+  z-index: 1;
 `;

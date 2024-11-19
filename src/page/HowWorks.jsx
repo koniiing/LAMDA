@@ -34,7 +34,7 @@ const PageWrapper = styled.div`
 const Title = styled.h1`
   font-size: 120px;
   margin: 210px 0px;
-  font-family: serif;
+  font-family: "Instrument Serif";
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;

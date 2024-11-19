@@ -51,9 +51,9 @@ const AppContainer = styled.div`
   margin-top: 50px;
 `;
 const Title = styled.h1`
-  font-size: 5rem;
-  margin-bottom: 33px;
-  font-family: serif;
+  font-size: 140px;
+  margin-bottom: 67px;
+  font-family: "Instrument Serif";
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;

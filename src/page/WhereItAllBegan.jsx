@@ -26,7 +26,6 @@ const WhereItAllBegan = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
   const stackedImages = [
-    images[(currentImageIndex + 0) % images.length],
     images[(currentImageIndex + 1) % images.length],
     images[(currentImageIndex + 2) % images.length],
     images[(currentImageIndex + 3) % images.length],
@@ -39,6 +38,9 @@ const WhereItAllBegan = () => {
     images[(currentImageIndex + 10) % images.length],
     images[(currentImageIndex + 11) % images.length],
     images[(currentImageIndex + 12) % images.length],
+    images[(currentImageIndex + 13) % images.length],
+    images[(currentImageIndex + 14) % images.length],
+    images[(currentImageIndex + 15) % images.length],
   ];
 
   return (

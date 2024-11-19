@@ -18,7 +18,7 @@ function AppRouter() {
         <Route path="/loading" element={<LoadingScreen />} />
         <Route path="/howworks" element={<HowWorks />} />
         <Route path="/result" element={<Result />} />
-        <Route path="/drive" element={<WhereItAllBegan />} />
+        <Route path="/inspiration" element={<WhereItAllBegan />} />
       </Routes>
     </Router>
   );

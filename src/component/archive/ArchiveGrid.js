@@ -31,7 +31,7 @@ const PageWrapper = styled.div`
 const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 200px 150px; /* 사진 간 간격을 더 크게 설정 */
+  gap: 200px 150px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

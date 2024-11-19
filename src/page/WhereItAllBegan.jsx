@@ -68,11 +68,11 @@ const Title = styled.h1`
   margin-bottom: 100px;
   font-family: "Instrument Serif";
   color: white;
-  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
-    0.5px 0.5px 0 black;
+  text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
+    -0.5px 0.5px 0 #484848, 0.5px 0.5px 0 #484848;
 
   &:hover {
-    color: black;
+    color: #484848;
   }
 `;
 
@@ -82,7 +82,7 @@ const ImageDummy = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* 자식 요소 겹치기 위해 relative 설정 */
+  position: relative;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   margin-bottom: 150px;

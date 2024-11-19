@@ -27,8 +27,9 @@ const FooterText = styled.p`
   font-weight: 400;
   font-size: 65px;
   color: white;
-  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
-    0.5px 0.5px 0 black;
+  text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
+    -0.5px 0.5px 0 #484848, 0.5px 0.5px 0 #484848;
+
   letter-spacing: -7.2px;
 `;
 

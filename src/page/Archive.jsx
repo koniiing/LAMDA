@@ -53,11 +53,11 @@ const Title = styled.h1`
   margin-bottom: 256px;
   font-family: "Instrument Serif";
   color: white;
-  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
-    0.5px 0.5px 0 black;
+  text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
+    -0.5px 0.5px 0 #484848, 0.5px 0.5px 0 #484848;
 
   &:hover {
-    color: black;
+    color: #484848;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
       1px 1px 0 white;
   }

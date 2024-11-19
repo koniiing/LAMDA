@@ -86,7 +86,8 @@ const FindYourLiking = styled.p`
   font-style: italic;
   font-size: 70px;
   color: white;
-  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black,
-    0.5px 0.5px 0 black;
+  text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
+    -0.5px 0.5px 0 #484848, 0.5px 0.5px 0 #484848;
+
   margin-top: 50px;
 `;

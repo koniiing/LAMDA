@@ -5,7 +5,7 @@ import Menu from "../component/home/Menu";
 import Description from "../component/home/Description";
 import Footer from "../component/common/Footer";
 import { motion } from "framer-motion";
-
+import lamdaGif from "../assets/images/lamda.gif";
 function Home() {
   const navigate = useNavigate();
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -46,6 +46,10 @@ function Home() {
     >
       <HomeWrapper>
         <Menu />
+        <Object>
+          {" "}
+          <img src={lamdaGif} />
+        </Object>
         <TitleWrapper isAnimated={isAnimated}>
           <Title
             $process={scrollHeight}
@@ -86,7 +90,13 @@ const HomeWrapper = styled.div`
     padding: 10px;
   }
 `;
-
+const Object = styled.div`
+  width: 1157px;
+  height: 1112px;
+  position: absolute;
+  top: 188px;
+  right: 44px;
+`;
 const TitleWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -113,8 +123,8 @@ const Title = styled.h1`
       return `calc(240px - (${($process / maxScroll) * 20}px))`;
     }
   }};
-  transition: opacity 1s cubic-bezier(0.25, 0.25, 0.75, 0.75),
-    font-size 0.5s cubic-bezier(0.25, 0.25, 0.75, 0.5);
+  transition: opacity 1s cubic-bezier(0.25, 0.5, 0.75, 0.25),
+    font-size 0.5s cubic-bezier(0.25, 0.5, 0.75, 0.25);
   opacity: ${({ opacity }) => opacity * 10};
   line-height: normal;
   text-transform: capitalize;

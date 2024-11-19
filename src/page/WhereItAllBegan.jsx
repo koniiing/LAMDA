@@ -3,12 +3,21 @@ import styled from "styled-components";
 import Footer from "../component/common/Footer2";
 import ProcessCircle from "../component/common/ProcessCircle";
 const images = [
-  process.env.PUBLIC_URL + "/inspirations/image1.webp",
-  process.env.PUBLIC_URL + "/inspirations/image2.png",
-  process.env.PUBLIC_URL + "/inspirations/image3.png",
-  process.env.PUBLIC_URL + "/inspirations/image4.png",
-  process.env.PUBLIC_URL + "/inspirations/image5.jpg",
-  process.env.PUBLIC_URL + "/inspirations/image6.jpg",
+  process.env.PUBLIC_URL + "/inspirations/1.webp",
+  process.env.PUBLIC_URL + "/inspirations/2.png",
+  process.env.PUBLIC_URL + "/inspirations/3.png",
+  process.env.PUBLIC_URL + "/inspirations/4.png",
+  process.env.PUBLIC_URL + "/inspirations/5.jpg",
+  process.env.PUBLIC_URL + "/inspirations/6.jpg",
+  process.env.PUBLIC_URL + "/inspirations/7.jpg",
+  process.env.PUBLIC_URL + "/inspirations/8.jpg",
+  process.env.PUBLIC_URL + "/inspirations/9.jpg",
+  process.env.PUBLIC_URL + "/inspirations/10.jpg",
+  process.env.PUBLIC_URL + "/inspirations/11.jpg",
+  process.env.PUBLIC_URL + "/inspirations/12.jpg",
+  process.env.PUBLIC_URL + "/inspirations/13.jpg",
+  process.env.PUBLIC_URL + "/inspirations/14.jpg",
+  process.env.PUBLIC_URL + "/inspirations/15.jpg",
 ];
 const WhereItAllBegan = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -20,6 +29,16 @@ const WhereItAllBegan = () => {
     images[(currentImageIndex + 0) % images.length],
     images[(currentImageIndex + 1) % images.length],
     images[(currentImageIndex + 2) % images.length],
+    images[(currentImageIndex + 3) % images.length],
+    images[(currentImageIndex + 4) % images.length],
+    images[(currentImageIndex + 5) % images.length],
+    images[(currentImageIndex + 6) % images.length],
+    images[(currentImageIndex + 7) % images.length],
+    images[(currentImageIndex + 8) % images.length],
+    images[(currentImageIndex + 9) % images.length],
+    images[(currentImageIndex + 10) % images.length],
+    images[(currentImageIndex + 11) % images.length],
+    images[(currentImageIndex + 12) % images.length],
   ];
 
   return (

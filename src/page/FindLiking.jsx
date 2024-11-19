@@ -151,7 +151,7 @@ const Description = styled.div`
 
 const KorDescription = styled.div`
   font-size: 18px;
-  color: #333;
+  color: #484848;
 `;
 
 const SubDescription = styled.div`
@@ -178,7 +178,7 @@ const KeywordBox = styled.input`
 
   &:focus {
     outline: none;
-    border: 1px solid #333;
+    border: 1px solid #484848;
   }
 `;
 
@@ -195,7 +195,7 @@ const NameInputSection = styled.div`
 
 const NameLabel = styled.p`
   font-size: 1rem;
-  color: #333;
+  color: #484848;
   line-height: 1.6;
   margin-right: 70px;
 `;
@@ -215,7 +215,7 @@ const NameInput = styled.input`
   border: none;
   padding: 0 10px;
   font-size: 1rem;
-  color: #333;
+  color: #484848;
 
   &:focus {
     outline: none;

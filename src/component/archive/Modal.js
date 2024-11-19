@@ -49,7 +49,7 @@ const ModalContent = styled.div`
   width: 1807px;
   max-height: 800px;
   display: flex;
-  border: 0.5px solid #000000;
+  border: 0.5px solid #484848;
   position: relative;
   font-family: Pretendard;
   font-weight: 300;
@@ -60,7 +60,7 @@ const ModalImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  margin: 28.8px 28.8px 49.5px 28.8px;
+  margin: 50px 50px 80px 50px;
 `;
 
 const ModalImage = styled.img`
@@ -91,7 +91,7 @@ const ImageLabel = styled.div`
 const VerticalLine = styled.div`
   width: 0.5px;
   height: auto;
-  background-color: black;
+  background-color: #484848;
 `;
 
 const ModalTextWrapper = styled.div`
@@ -110,16 +110,15 @@ const TextCard = styled.div`
   h3 {
     font-family: Pretendard;
     font-size: 20px;
-    margin: 50px;
+    margin: 50px 0px 20px 50px;
     color: #484848;
     font-weight: 600;
-    line-height: 25px;
   }
 
   p {
     font-family: Pretendard;
     font-size: 20px;
-    color: #555;
+    color: #484848;
     margin-left: 50px;
     margin-bottom: 50px;
     font-weight: 300;
@@ -130,5 +129,5 @@ const TextCard = styled.div`
 const HorizontalLine = styled.div`
   width: 563px;
   height: 0.5px;
-  background-color: black;
+  background-color: #484848;
 `;

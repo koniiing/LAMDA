@@ -96,10 +96,10 @@ const HomeWrapper = styled.div`
 `;
 const Object = styled.div`
   width: 1157px;
-  height: 1112px;
+  height: auto;
   position: absolute;
   top: 188px;
-  right: 44px;
+  right: 24px;
 `;
 const TitleWrapper = styled.div`
   display: flex;

@@ -41,6 +41,7 @@ const WhereItAllBegan = () => {
     images[(currentImageIndex + 13) % images.length],
     images[(currentImageIndex + 14) % images.length],
     images[(currentImageIndex + 15) % images.length],
+    //    images[(currentImageIndex + 16) % images.length],
   ];
 
   return (
@@ -100,28 +101,27 @@ const StackedImage = styled.img`
   object-fit: contain;
   position: absolute;
   background-color: none;
-  border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   &:nth-child(1) {
     transform: rotate(-5deg) translateX(-15px) translateY(-10px);
     z-index: 1;
-    opacity: 0.9;
+    opacity: 1;
   }
   &:nth-child(2) {
     transform: rotate(3deg) translateX(15px) translateY(10px);
     z-index: 2;
-    opacity: 0.8;
+    opacity: 1;
   }
   &:nth-child(3) {
     transform: rotate(-2deg) translateX(-10px) translateY(20px);
     z-index: 3;
-    opacity: 0.7;
+    opacity: 1;
   }
   &:last-child {
     z-index: 4;
-    transform: none;
+    transform: rotate(1.5deg) translateX(-5px) translateY(5px);
     opacity: 1;
   }
 `;

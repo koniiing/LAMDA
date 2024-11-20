@@ -45,6 +45,8 @@ const PageWrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  transition: color 0.3s;
+
   font-size: 140px;
   margin-top: 210px;
   margin-bottom: 256px;

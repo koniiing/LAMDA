@@ -5,7 +5,7 @@ import Menu from "../component/home/Menu";
 import Description from "../component/home/Description";
 import Footer from "../component/common/Footer";
 import { motion } from "framer-motion";
-import lamdaGif from "../assets/images/lamda.gif";
+import lamdaGif from "../assets/images/lamda2.gif";
 function Home() {
   const navigate = useNavigate();
   const [scrollHeight, setScrollHeight] = useState(0);

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import Footer from "../component/common/Footer2";
 import ProcessCircle from "../component/common/ProcessCircle";
 const images = [
@@ -45,16 +47,23 @@ const WhereItAllBegan = () => {
   ];
 
   return (
-    <Container>
-      <ProcessCircle />
-      <Title>(Where It All Began)</Title>
-      <ImageDummy onClick={handleNextImage}>
-        {stackedImages.map((src, index) => (
-          <StackedImage key={index} src={src} alt={`Stacked ${index + 1}`} />
-        ))}
-      </ImageDummy>
-      <Footer />
-    </Container>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Container>
+        <ProcessCircle />
+        <Title>(Where It All Began)</Title>
+        <ImageDummy onClick={handleNextImage}>
+          {stackedImages.map((src, index) => (
+            <StackedImage key={index} src={src} alt={`Stacked ${index + 1}`} />
+          ))}
+        </ImageDummy>
+        <Footer />
+      </Container>
+    </motion.div>
   );
 };
 
@@ -67,6 +76,8 @@ const Container = styled.div`
   margin-top: 210px;
 `;
 const Title = styled.h1`
+  transition: color 0.3s;
+
   font-size: 140px;
   margin-bottom: 100px;
   font-family: "Instrument Serif";

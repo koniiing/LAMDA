@@ -128,8 +128,7 @@ const TextCard = styled.div`
 
 const HorizontalLine = styled.div`
   width: 563px;
-  height: 0.5px;
+  height: 3px;
   background-color: #484848;
   position: relative;
-  z-index: 1;
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import obj from "../assets/images/lamda.gif";
+import obj from "../assets/images/lamda2.gif";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 

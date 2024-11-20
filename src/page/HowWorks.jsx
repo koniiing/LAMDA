@@ -32,6 +32,8 @@ const PageWrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  transition: color 0.3s;
+
   font-size: 140px;
   margin: 210px 0px;
   font-family: "Instrument Serif";

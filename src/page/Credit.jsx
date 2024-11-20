@@ -2,43 +2,52 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import obj from "../assets/images/lamda.gif";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const Credit = () => {
   const navigate = useNavigate();
 
   const text = ".irudagirooW .gnoeJ nueoK Dabin Ryu. Wooseok Shin ";
   return (
-    <Container>
-      <Title
-        onClick={() => {
-          window.scrollTo({ top: 0 });
-          navigate("/");
-        }}
-      >
-        2024 ATC
-      </Title>
-      <Ellipse>
-        {text.split("").map((char, index) => (
-          <TextChar
-            key={index}
-            index={index}
-            total={text.length}
-            rx={400}
-            ry={500}
-          >
-            {char}
-          </TextChar>
-        ))}
-        <Face src={obj} alt="face" />
-      </Ellipse>{" "}
-      <Title
-        onClick={() => {
-          window.scrollTo({ top: 0 });
-          navigate("/");
-        }}
-      >
-        LAMDA!
-      </Title>
-    </Container>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Container>
+        <Title
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+            navigate("/");
+          }}
+        >
+          2024 ATC
+        </Title>
+        <Ellipse>
+          {text.split("").map((char, index) => (
+            <TextChar
+              key={index}
+              index={index}
+              total={text.length}
+              rx={400}
+              ry={500}
+            >
+              {char}
+            </TextChar>
+          ))}
+          <Face src={obj} alt="face" />
+        </Ellipse>{" "}
+        <Title
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+            navigate("/");
+          }}
+        >
+          LAMDA!
+        </Title>
+      </Container>
+    </motion.div>
   );
 };
 
@@ -69,12 +78,17 @@ const Container = styled.div`
   flex-direction: column;
 `;
 const Title = styled.h1`
+  transition: color 0.3s;
+
   cursor: pointer;
   font-size: 140px;
   font-family: "Instrument Serif";
   color: white;
   text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
     -0.5px 0.5px 0 #484848, 0.5px 0.5px 0 #484848;
+  &:hover {
+    color: black;
+  }
 `;
 
 // 타원형 경로
@@ -98,7 +112,7 @@ const TextChar = styled.span`
   /* 긴 루프 애니메이션 적용 */
   animation: ${({ index, total, rx, ry }) =>
       moveAlongPath(index, total, rx, ry)}
-    22s linear infinite;
+    10s linear infinite;
 `;
 
 // 중앙 이미지

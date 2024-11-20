@@ -42,7 +42,6 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: serif;
 `;
 
 const Title = styled.h1`

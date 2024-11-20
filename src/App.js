@@ -1,11 +1,13 @@
 import AppRouter from "./Router";
 import { GlobalStyles } from "./style/GroblaStyles";
 import styled from "styled-components";
+import ScrollToTop from "./component/common/ScrollToTop";
 function App() {
   return (
     <>
       <GlobalStyles />
       <AppWrapper>
+        {" "}
         <AppRouter />
       </AppWrapper>
     </>

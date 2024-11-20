@@ -7,11 +7,16 @@ import HowWorks from "./page/HowWorks";
 import Result from "./page/Result";
 import Home from "./page/Home";
 import WhereItAllBegan from "./page/WhereItAllBegan";
+import ScrollToTop from "./component/common/ScrollToTop";
+import Credit from "./page/Credit";
 
 function AppRouter() {
   return (
     <Router>
+      {" "}
+      <ScrollToTop />
       <Routes>
+        {" "}
         <Route path="/" element={<Home />} />
         <Route path="/archive" element={<Archive />} />{" "}
         <Route path="/findliking" element={<FindLiking />} />
@@ -19,6 +24,7 @@ function AppRouter() {
         <Route path="/howworks" element={<HowWorks />} />
         <Route path="/result" element={<Result />} />
         <Route path="/inspiration" element={<WhereItAllBegan />} />
+        <Route path="/credit" element={<Credit />} />
       </Routes>
     </Router>
   );

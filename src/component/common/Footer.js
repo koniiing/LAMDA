@@ -1,10 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <FooterWrapper>
-      <FooterText>@lamda!</FooterText>
+      <FooterText
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+          navigate("/credit");
+        }}
+      >
+        @lamda!
+      </FooterText>
       <Copyright>© 2024 LAMDA! All rights reserved.</Copyright>
     </FooterWrapper>
   );
@@ -18,6 +28,7 @@ const FooterWrapper = styled.footer`
 `;
 
 const FooterText = styled.p`
+  cursor: pointer;
   font-family: "Konkhmer Sleokchher";
   font-weight: 400;
   font-size: 90px;

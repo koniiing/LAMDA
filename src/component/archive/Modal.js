@@ -49,7 +49,7 @@ const ModalContent = styled.div`
   width: 1807px;
   max-height: 800px;
   display: flex;
-  border: 0.5px solid #484848;
+  border: 2px solid #484848;
   position: relative;
   font-family: Pretendard;
   font-weight: 300;
@@ -89,7 +89,7 @@ const ImageLabel = styled.div`
 `;
 
 const VerticalLine = styled.div`
-  width: 0.5px;
+  width: 2px;
   height: auto;
   background-color: #484848;
 `;
@@ -128,7 +128,7 @@ const TextCard = styled.div`
 
 const HorizontalLine = styled.div`
   width: 563px;
-  height: 3px;
+  height: 2px;
   background-color: #484848;
   position: relative;
 `;

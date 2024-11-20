@@ -5,15 +5,15 @@ import Menu from "../component/home/Menu";
 import Description from "../component/home/Description";
 import Footer from "../component/common/Footer";
 import { motion } from "framer-motion";
-import lamdaGif from "../assets/images/0001-0150.gif";
+import lamdaGif from "../assets/images/lamda.gif";
 function Home() {
   const navigate = useNavigate();
   const [scrollHeight, setScrollHeight] = useState(0);
   const [titleSuffix, setTitleSuffix] = useState("!");
   const [isAnimated, setIsAnimated] = useState(true);
-  const maxScroll = window.innerHeight; // Start fading after this point
-  const fadeStart = maxScroll; // Start fading after maxScroll
-  const fadeEnd = maxScroll * 2; // End fading at twice maxScroll
+  const maxScroll = window.innerHeight;
+  const fadeStart = maxScroll;
+  const fadeEnd = maxScroll * 2;
 
   useEffect(() => {
     const handleScroll = () => {

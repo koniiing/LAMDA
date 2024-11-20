@@ -89,10 +89,9 @@ const ImageLabel = styled.div`
 `;
 
 const VerticalLine = styled.div`
-  width: 2px;
+  width: 3px;
   height: auto;
   background-color: #484848;
-  z-index: 2px;
 `;
 
 const ModalTextWrapper = styled.div`

@@ -56,6 +56,9 @@ const WhereItAllBegan = () => {
       <Container>
         <ProcessCircle />
         <Title>(Where It All Began)</Title>
+        <Description>
+          프로젝트의 시작이 된 아티스트들의 취향입니다. 클릭하여 확인해 보세요.{" "}
+        </Description>
         <ImageDummy onClick={handleNextImage}>
           {stackedImages.map((src, index) => (
             <StackedImage key={index} src={src} alt={`Stacked ${index + 1}`} />
@@ -79,7 +82,7 @@ const Title = styled.h1`
   transition: color 0.3s;
 
   font-size: 140px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   font-family: "Instrument Serif";
   color: white;
   text-shadow: -0.5px -0.5px 0 #484848, 0.5px -0.5px 0 #484848,
@@ -88,6 +91,12 @@ const Title = styled.h1`
   &:hover {
     color: #484848;
   }
+`;
+const Description = styled.div`
+  font-size: 30px;
+  color: #484848;
+  font-family: Pretendard;
+  margin-bottom: 226px;
 `;
 
 const ImageDummy = styled.div`
